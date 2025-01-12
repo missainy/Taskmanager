@@ -36,11 +36,11 @@ A web application to enhance productivity by combining task management, a Pomodo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/task-manager-pomodoro.git
+   git clone https://github.com/missainy/Taskmanager.git
    ```
 2. Navigate to the project folder:
    ```bash
-   cd task-manager-pomodoro
+   cd Taskmanager
    ```
 3. Open the application:
    - Open the `index.html` file in your web browser.
