@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the document type and HTML language as English -->
+    <meta charset="UTF-8">
+    <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <title>Task Manager with Pomodoro Timer</title>
+    <!-- Sets the title of the document to "Task Manager with Pomodoro Timer" -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Links to an external CSS file named "style.css" -->
+</head>
+<body>
+    <!-- Body starts here -->
+    <header>
+        <h1>Task Manager with Pomodoro Timer</h1>
+        <!-- Header contains the main title of the page -->
+    </header>
+    <main>
+        <!-- Main content area starts here -->
+        <div class="widget task-management">
+            <h2>Task Management</h2>
+            <!-- Task management widget -->
+            <form id="task-form">
+                <input type="text" id="task-name" placeholder="Task Name" required>
+                <input type="date" id="due-date" required>
+                <input type="text" id="category" placeholder="Category (e.g., Work, Personal, Study)" required>
+                <select id="priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <input type="text" id="subtasks" placeholder="Subtasks (comma-separated)">
+                <button type="submit">Add Task</button>
+            </form>
+            <!-- Form for adding tasks -->
+        </div>
+
+        <div class="widget pomodoro-timer">
+            <h2>Pomodoro Timer</h2>
+            <!-- Pomodoro timer widget -->
+            <div class="timer-circle">
+                <svg
+                    class="progress-ring"
+                    width="200"
+                    height="200"
+                    viewBox="0 0 200 200"
+                >
+                    <circle
+                        class="progress-ring-circle"
+                        cx="100"
+                        cy="100"
+                        r="90"
+                        fill="transparent"
+                        stroke="#e0e0e0"
+                        stroke-width="10"
+                    ></circle>
+                    <circle
+                        class="progress-ring-circle"
+                        id="progress-circle"
+                        cx="100"
+                        cy="100"
+                        r="90"
+                        fill="transparent"
+                        stroke="#6200ea"
+                        stroke-width="10"
+                        stroke-dasharray="565"
+                        stroke-dashoffset="0"
+                    ></circle>
+                </svg>
+                <!-- SVG structure for the timer circle -->
+                <p id="timer">25:00</p>
+                <!-- Timer display -->
+            </div>
+            <div class="button-group">
+                <button id="start-timer">Start</button>
+                <button id="pause-timer">Pause</button>
+                <button id="reset-timer">Reset</button>
+            </div>
+            <!-- Timer control buttons -->
+        </div>
+
+        <div class="widget task-tracking">
+            <h2>Task Tracking</h2>
+            <!-- Task tracking widget -->
+            <h3>Tasks</h3>
+            <div id="task-list"></div>
+            <!-- List of tasks -->
+            <h3>Completed Tasks</h3>
+            <div id="completed-task-list"></div>
+            <!-- List of completed tasks -->
+        </div>
+
+        <div class="widget activity-chart">
+            <h2>Activity Chart</h2>
+            <!-- Activity chart widget -->
+            <div class="chart-container">
+                <canvas id="activity-chart"></canvas>
+                <!-- Canvas element for rendering chart -->
+            </div>
+        </div>
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
+</script>
+</body>
+</html>

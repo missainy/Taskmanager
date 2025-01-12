@@ -1,0 +1,204 @@
+ body {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+            height: 100vh;
+            margin: 0;
+        }
+        /* Styles for the body element to define a grid layout */
+
+        header {
+            text-align: center;
+            background-color: #6200ea;
+            color: white;
+            padding: 0px;
+        }
+        /* Styles for the header section */
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            padding: 100px;
+        }
+        /* Styles for the main content area */
+
+        .widget {
+            background-color: #E8DAFC;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        /* Widget container styles */
+
+        .widget h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        /* Styles for widget titles */
+
+        .task-management {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        /* Grid positioning for Task Management widget */
+
+        .pomodoro-timer {
+            grid-column: 2;
+            grid-row: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* Styles and grid positioning for Pomodoro Timer widget */
+
+        .task-tracking {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        /* Grid positioning for Task Tracking widget */
+
+        .activity-chart {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        /* Grid positioning for Activity Chart widget */
+
+        .chart-container {
+            max-width: 100%;
+        }
+        /* Chart container styles */
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        /* Styles for button groups */
+
+        .button-group button {
+          flex: 1;
+          padding: 10px;
+          background-color: #6200ea;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+        /* Makes buttons equal in size within the button group */
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        /* Styles for forms with flexible layout */
+
+        form input,
+        form select,
+        form button {
+            flex: 1 1 calc(33.333% - 20px);
+            min-width: 150px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        /* General styles for form inputs, selects, and buttons */
+
+        form button {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        /* Button-specific styles */
+
+        form button:hover {
+            background-color: #5300c9;
+        }
+        /* Hover effect for buttons */
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        /* Styles for individual task items */
+
+        .task-actions {
+            display: flex;
+            gap: 10px;
+        }
+        /* Styles for task action buttons */
+
+        .task-actions button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        /* General styles for action buttons */
+
+        .task-actions .complete {
+            background-color: #28a745;
+        }
+        /* Styles for the "Complete" action button */
+
+        .task-actions .complete:hover {
+            background-color: #218838;
+        }
+        /* Hover effect for the "Complete" action button */
+
+        .task-actions .delete {
+            background-color: #dc3545;
+        }
+        /* Styles for the "Delete" action button */
+
+        .task-actions .delete:hover {
+            background-color: #c82333;
+        }
+        /* Hover effect for the "Delete" action button */
+
+        .timer-circle {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%; /* Keeps the circular shape */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2rem; /* Timer text size */
+          color: #333; /* Timer text color */
+          position: relative;
+          margin-bottom: 20px;
+          overflow: hidden; /* Ensures no excess from progress circle is visible */
+        }
+
+        .timer-circle .progress-ring {
+           position: absolute;
+           top: 0;
+          left: 0;
+          transform: rotate(-90deg); /* Aligns the starting point */
+         transform-origin: center;
+        }
+
+        /* Styles for the progress ring in the timer */
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+        }
+        /* Styles for the footer section */
